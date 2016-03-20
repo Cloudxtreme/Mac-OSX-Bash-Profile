@@ -19,7 +19,7 @@ cd ~/.
 ```
 Download the `install.sh` file using wget:
 
-	wget https://github.com/naacal/.bash_profile/blob/master/install.sh
+	wget https://github.com/naacal/Mac-OSX-Bash-Profile/blob/master/install.sh
 
 To install the .bash_profile type:
 
