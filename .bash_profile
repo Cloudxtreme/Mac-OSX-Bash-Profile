@@ -4,6 +4,7 @@
     alias netCons='lsof -i'                                                     # netCons:      Show all open TCP/IP sockets
     alias flushDNS='dscacheutil -flushcache'                                    # flushDNS:     Flush out the DNS Cache
     alias lsock='sudo /usr/sbin/lsof -i -P'                                     # lsock:        Display open sockets
+    alias net='ping google.com'                                                 # net:          Cheat
     alias lsockU='sudo /usr/sbin/lsof -nP | grep UDP'                           # lsockU:       Display only open UDP sockets
     alias lsockT='sudo /usr/sbin/lsof -nP | grep TCP'                           # lsockT:       Display only open TCP sockets
     alias en0="ifconfig en0 | grep ether"                                       # ipInfo0:      Get info on connections for en0
@@ -11,9 +12,10 @@
     alias openPorts='sudo lsof -i | grep LISTEN'                                # openPorts:    All listening connections
     alias showBlocked='sudo ipfw list'                                          # showBlocked:  All ipfw rules inc/ blocked IPs
     alias getip="curl ipecho.net/plain ; echo"                                  # getip:        Preferred ip echo implementation
-    alias net="ifconfig | grep inet"                                            # net:          Preferred ifconfig implementation
+    alias inet="ifconfig | grep inet"                                           # inet:         Preferred ifconfig implementation
     alias prof="atom ~/.bash_profile"                                           # prof:         Preferred bash_profile edit implementation
     alias re='source ~/.bash_profile'                                           # re:           Preferred bash_profile reload implementation
+    alias mem='sudo purge'                                                      # re:           Flush memory
 
 #   -------------------------------------------------------------
 #   TERMINAL / COMMON
@@ -116,7 +118,21 @@
     alias go='git checkout '
     alias gk='gitk --all&'
     alias gx='gitx --all'
-    alias gp='git push origin master'
+    alias gp='git push origin master'                                           # gp: This one is a joke
 
     alias got='git '
     alias get='git '
+
+#   -------------------------------------------------------------
+#   Wget
+#   -------------------------------------------------------------
+
+    alias wall='wget -e robots=off -x --mirror --recursive --page-requisites'
+
+#   -------------------------------------------------------------
+#   Misc
+#   -------------------------------------------------------------
+
+    alias stat='du -sh *'                                                       # stat:     Displays disk usage information for directory's
+    alias home='du -sh'                                                         # home:     Displays disk usage information for home directory
+    alias disk='df -h'                                                          # disk:     Displays disk usage information / all disks
