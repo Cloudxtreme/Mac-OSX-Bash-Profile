@@ -16,6 +16,10 @@
     alias prof="atom ~/.bash_profile"                                           # prof:         Preferred bash_profile edit implementation
     alias re='source ~/.bash_profile'                                           # re:           Preferred bash_profile reload implementation
     alias mem='sudo purge'                                                      # re:           Flush memory
+    alias rout='traceroute '                                                    # rout:         Traceroute
+
+
+    alias wnet='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -s'   # wnet: View wireless networks
 
 #   -------------------------------------------------------------
 #   TERMINAL / COMMON
@@ -27,7 +31,6 @@
     alias cp='cp -iv'                                                           # cp:           Preferred implementation
     alias mv='mv -iv'                                                           # mv:           Preferred implementation
     alias edit='atom'                                                           # edit:         Opens any file in atom editor
-  # alias edit='subl'                                                           # edit:         Opens any file in sublime editor
     alias ls='ls -lah $LS_COLOR'                                                # ls:           Preferred implementation
     alias path='echo -e ${PATH//:/\\n}'                                         # path:         Echo all executable Paths
     alias cic='set completion-ignore-case On'                                   # cic:          Make tab-completion case-insensitive
@@ -136,3 +139,29 @@
     alias stat='du -sh *'                                                       # stat:     Displays disk usage information for directory's
     alias home='du -sh'                                                         # home:     Displays disk usage information for home directory
     alias disk='df -h'                                                          # disk:     Displays disk usage information / all disks
+
+##
+# Your previous /Users/Naacal/.bash_profile file was backed up as /Users/Naacal/.bash_profile.macports-saved_2016-05-15_at_01:04:43
+##
+
+# MacPorts Installer addition on 2016-05-15_at_01:04:43: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+#   -------------------------------------------------------------
+#   SYSTEM
+#   -------------------------------------------------------------
+    alias sys='sysctl -n machdep.cpu.brand_string'                              # Get CPU information
+    alias headerc='curl -I --compress'                                          # Find out if remote server supports gzip / mod_deflate or not #
+    alias apacheEdit='sudo edit /etc/httpd/httpd.conf'                          # apacheEdit:           Edit httpd.conf
+    alias apacheRestart='sudo apachectl graceful'                               # apacheRestart:        Restart Apache
+    alias editHosts='sudo edit /etc/hosts'                                      # editHosts:            Edit /etc/hosts file
+    alias herr='tail /var/log/httpd/error_log'                                  # herr:                 Tails HTTP error logs
+    alias apacheLogs="less +F /var/log/apache2/error_log"                       # Apachelogs:           Shows apache error logs
+    alias pyServer="python -m SimpleHTTPServer"                                 # Python server from current directory tree at http://$HOSTNAME:8000/
+    alias phpServer="php -S 127.0.0.1:8080"                                     # PHP server from current directory tree at http://$HOSTNAME:8080/
+
+#   -------------------------------------------------------------
+#   Net
+#   -------------------------------------------------------------
+    alias da='youtube-dl --extract-audio --audio-format mp3 '                   # Extract audio from YouTube | Requires [youtube-dl lib]
