@@ -17,6 +17,8 @@
     alias re='source ~/.bash_profile'                                           # re:           Preferred bash_profile reload implementation
     alias mem='sudo purge'                                                      # re:           Flush memory
     alias rout='traceroute '                                                    # rout:         Traceroute
+    alias nets='netstat -ap tcp '                                               # nets:         Active Internet connections, including servers
+    alias nettcp='netstat -atp tcp | grep -i "listen" '                         # nettcp:       Active Internet connections, including servers
 
 
     alias wnet='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -s'   # wnet: View wireless networks
@@ -165,3 +167,11 @@ export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 #   Net
 #   -------------------------------------------------------------
     alias da='youtube-dl --extract-audio --audio-format mp3 '                   # Extract audio from YouTube | Requires [youtube-dl lib]
+
+##
+# Your previous /Users/Naacal/.bash_profile file was backed up as /Users/Naacal/.bash_profile.macports-saved_2016-07-30_at_13:52:31
+##
+
+# MacPorts Installer addition on 2016-07-30_at_13:52:31: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
