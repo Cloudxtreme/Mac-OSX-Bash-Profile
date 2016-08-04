@@ -19,6 +19,8 @@
     alias rout='traceroute '                                                    # rout:         Traceroute
     alias nets='netstat -ap tcp '                                               # nets:         Active Internet connections, including servers
     alias nettcp='netstat -atp tcp | grep -i "listen" '                         # nettcp:       Active Internet connections, including servers
+    alias proxyoff='networksetup -setsocksfirewallproxystate Wi-Fi off '        # proxyoff:     Set Socks5 proxy off
+    alias proxyon='networksetup -setsocksfirewallproxystate Wi-Fi on '          # proxyon:     Set Socks5 proxy on
 
 
     alias wnet='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -s'   # wnet: View wireless networks
