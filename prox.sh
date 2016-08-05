@@ -27,7 +27,7 @@ networksetup -getpassiveftp wi-fi
 
 networksetup -getinfo wi-fi
 echo ''
-echo 'Conputer Name'
+echo 'Computer Name'
 networksetup -getcomputername wi-fi
 echo ''
 echo 'DNS Server'
