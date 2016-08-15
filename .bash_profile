@@ -1,4 +1,4 @@
-#   -------------------------------------------------------------
+no#   -------------------------------------------------------------
 #   NETWORKING
 #   -------------------------------------------------------------
     alias netCons='lsof -i'                                                     # netCons:      Show all open TCP/IP sockets
@@ -19,8 +19,12 @@
     alias rout='traceroute '                                                    # rout:         Traceroute
     alias nets='netstat -ap tcp '                                               # nets:         Active Internet connections, including servers
     alias nettcp='netstat -atp tcp | grep -i "listen" '                         # nettcp:       Active Internet connections, including servers
-    alias proxyoff='networksetup -setsocksfirewallproxystate Wi-Fi off '        # proxyoff:     Set Socks5 proxy off
-    alias proxyon='networksetup -setsocksfirewallproxystate Wi-Fi on '          # proxyon:     Set Socks5 proxy on
+    alias proxyoff='sudo networksetup -setsocksfirewallproxystate Wi-Fi off '   # proxyoff:     Set Socks5 proxy off
+    alias proxyon='sudo networksetup -setsocksfirewallproxystate Wi-Fi on '     # proxyon:      Set Socks5 proxy on
+    alias pro='/Applications/pro.sh '                                           # pro:          Get network stats
+    alias prox='/Applications/prox.sh '                                         # prox:         Start secure session
+    alias flush='rm -rf /.DocumentRevisions-V100/; rm -rf /private/var/vm '     # flush:        Remove /.DocumentRevisions
+
 
 
     alias wnet='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -s'   # wnet: View wireless networks
@@ -126,7 +130,6 @@
     alias gk='gitk --all&'
     alias gx='gitx --all'
     alias gp='git push origin master'                                           # gp: This one is a joke
-
     alias got='git '
     alias get='git '
 
@@ -144,10 +147,6 @@
     alias home='du -sh'                                                         # home:     Displays disk usage information for home directory
     alias disk='df -h'                                                          # disk:     Displays disk usage information / all disks
 
-##
-# Your previous /Users/Naacal/.bash_profile file was backed up as /Users/Naacal/.bash_profile.macports-saved_2016-05-15_at_01:04:43
-##
-
 # MacPorts Installer addition on 2016-05-15_at_01:04:43: adding an appropriate PATH variable for use with MacPorts.
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
@@ -164,15 +163,12 @@ export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
     alias apacheLogs="less +F /var/log/apache2/error_log"                       # Apachelogs:           Shows apache error logs
     alias pyServer="python -m SimpleHTTPServer"                                 # Python server from current directory tree at http://$HOSTNAME:8000/
     alias phpServer="php -S 127.0.0.1:8080"                                     # PHP server from current directory tree at http://$HOSTNAME:8080/
+    alias secureerase="diskutil secureErase freespace 0 /Volumes/Macintosh\ HD" # Erase Free Hard Drive Space Securely
 
 #   -------------------------------------------------------------
 #   Net
 #   -------------------------------------------------------------
     alias da='youtube-dl --extract-audio --audio-format mp3 '                   # Extract audio from YouTube | Requires [youtube-dl lib]
-
-##
-# Your previous /Users/Naacal/.bash_profile file was backed up as /Users/Naacal/.bash_profile.macports-saved_2016-07-30_at_13:52:31
-##
 
 # MacPorts Installer addition on 2016-07-30_at_13:52:31: adding an appropriate PATH variable for use with MacPorts.
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
