@@ -11,19 +11,23 @@ echo 'Clear System Log Files...'
 sudo rm -rfv /private/var/log/asl/*.asl &>/dev/null
 sudo rm -rfv /Library/Logs/DiagnosticReports/* &>/dev/null
 sudo rm -rfv /Library/Logs/Adobe/* &>/dev/null
-rm -rfv ~/Library/Containers/com.apple.mail/Data/Library/Logs/Mail/* &>/dev/null
-rm -rfv ~/Library/Logs/CoreSimulator/* &>/dev/null
-
-rm -rf ~/Library/Caches/*
-rm -rf ~/Library/logs/*
-sudo rm -rf /Library/Caches/*
-sudo rm -rf /Library/logs/*
+sudo rm -rfv ~/Library/Containers/com.apple.mail/Data/Library/Logs/Mail/* &>/dev/null
+sudo rm -rfv ~/Library/Logs/CoreSimulator/* &>/dev/null
+sudo rm -rf /private/var/vm
+sudo rm -rf ~/Library/Caches/*
+sudo rm -rf ~/Library/Autosave\ Information/*
+sudo rm -rf ~/Library/logs/*
 sudo rm -rf /var/log/*
 sudo rm -rf /private/var/folders/*
+sudo rm -rf /.DocumentRevisions-V100/
+
 
 
 echo 'Clear Adobe Cache Files...'
 sudo rm -rfv ~/Library/Application\ Support/Adobe/Common/Media\ Cache\ Files/* &>/dev/null
+
+echo 'Clear System Cache Files...'
+sudo rm -rfv /System/Library/Caches/*
 
 echo 'Purge inactive memory...'
 purge
